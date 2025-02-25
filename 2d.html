@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="tonali.js">
+    </head>
+    <style>
+   body{
+    background: linear-gradient(-135deg, #002c3f, #000000, #002c3f); /* Nền tối gradient */
+    min-height: 30vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    height: 2600px;
+}
+.anh{
+    margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header {
+    padding: 1rem 2rem;
+    position: fixed; /* Giữ cố định khi cuộn */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.4s ease-in-out, padding 0.3s ease-in-out;
+}
+
+header.scrolled {
+    background-color: #000000; /* Đổi màu nền khi cuộn */
+    padding: 0.5rem 2rem;
+}
+
+.logo1 {
+    height: 50px; /* Điều chỉnh kích thước logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-size: 1.2rem;
+    margin-right: 50px;
+}
+
+nav a {
+    color: #29ABE2;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+      .contact-button1 {
+          background-color: #29ABE2;
+          color: #ffffff;
+          border: none;
+          padding: 0.5rem 1rem;
+          cursor: pointer;
+          font-weight: 600;
+          border-radius: 5px;
+          transition: background-color 0.3s, transform 0.3s;
+          font-size: 1.5rem;
+      }
+      .contact-button1:hover {
+          background-color: #29ABE2;
+          transform: scale(1.1);
+          color: #000000;
+          
+      }
+      
+      
+
+
+
+
+      
+      /*hover button contact*/
+      .button1 {
+        background: transparent;
+        position: relative;
+        padding: 5px 15px;
+        display: flex;
+        align-items: center;
+        font-size: 1.25rem;
+        
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        border: 1px solid #11739c;
+        border-radius: 25px;
+        outline: none;
+        overflow: hidden;
+        color: #29ABE2;
+        transition: color 0.3s 0.1s ease-out;
+        text-align: center;
+      }
+      
+      .button1 span {
+        margin: 10px;
+      }
+      
+      .button1::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        content: '';
+        border-radius: 50%;
+        display: block;
+        width: 20em;
+        height: 20em;
+        left: -5em;
+        text-align: center;
+        transition: box-shadow 0.5s ease-out;
+        z-index: -1;
+      }
+      
+      .button1:hover {
+        color: #fff;
+        border: 1px solid #29ABE2;
+      }
+      
+      .button1:hover::before {
+        box-shadow: inset 0 0 0 10em #29ABE2;
+      }
+      .portfolio-menu {
+            display: none;
+            position: absolute;
+            background: #000;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            min-width: 150px;
+        }
+
+        .portfolio-menu a {
+            display: block;
+            padding: 8px 10px;
+            color: #29ABE2;
+            text-decoration: none;
+        }
+
+        .portfolio-menu a:hover {
+            background: #29ABE2;
+            color: #000;
+        }
+    </style>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <header>
+        <img src="logo.png" class="logo1"></img>
+        <nav>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li>
+                  <a href="#" id="portfolioBtn">Portfolio ▾</a>
+                  <div class="portfolio-menu" id="portfolioMenu">
+                      <a href="tonali.html">Branding</a>
+                      <a href="ui.html">UI</a>
+                      <a href="poster.html">Poster</a>
+                      <a href="banner.html">Banner</a>
+                      <a href="social.html">Social</a>
+                      <a href="standee.html">Standee</a>
+                      <a href="logo.html">Logo</a>
+                      <a href="2d.html">2D Products</a>
+                  </div>
+              </li>
+              <li><button class="button1" onclick="window.location.href='https://www.facebook.com/profile.php?id=100045773663561'">Contact</button></li>
+          </ul>
+        </nav>
+    </header>
+    
+    
+<body>
+      
+        <div class="anh">
+            <img src="2d im.png" alt="">
+        </div>
+       
+     
+
+<script src="tonali.js"></script>
+  
+ <script>
+ window.addEventListener("scroll", function () {
+    let header = document.querySelector("header");
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+      });
+ </script>
+  <script>
+    window.addEventListener("scroll", function () {
+       let header = document.querySelector("header");
+       if (window.scrollY > 50) {
+           header.classList.add("scrolled");
+       } else {
+           header.classList.remove("scrolled");
+       }
+         });
+    </script>
+    <script>
+       function openContent() {
+         document.getElementById('contentPage').style.display = 'flex';
+       }
+   
+       function closeContent() {
+         document.getElementById('contentPage').style.display = 'none';
+       }
+     </script>
+     <script>
+       function closeModal() {
+                document.getElementById('modal').classList.add('hidden');
+            }
+   </script>
+   <script>
+       document.addEventListener("DOMContentLoaded", function () {
+           const portfolioBtn = document.getElementById("portfolioBtn");
+           const portfolioMenu = document.getElementById("portfolioMenu");
+   
+           portfolioBtn.addEventListener("click", function (event) {
+               event.preventDefault();
+               portfolioMenu.style.display = portfolioMenu.style.display === "block" ? "none" : "block";
+           });
+   
+           document.addEventListener("click", function (event) {
+               if (!portfolioBtn.contains(event.target) && !portfolioMenu.contains(event.target)) {
+                   portfolioMenu.style.display = "none";
+               }
+           });
+       });
+   </script>
+</body>
+    </html>

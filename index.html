@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khac Huy Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="edit.css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="effeect.css" />
+    <link rel="stylesheet" href="test.css" />
+    <link rel="stylesheet" href="app.js" />
+    
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+    </style>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+
+
+
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div class="loading-overlay">
+    <div class="loader">
+        <div class="box">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 94 94">
+                    <path d="M38.0481 4.82927C38.0481 2.16214 40.018 0 42.4481 0H51.2391C53.6692 0 55.6391 2.16214 55.6391 4.82927V40.1401C55.6391 48.8912 53.2343 55.6657 48.4248 60.4636C43.6153 65.2277 36.7304 67.6098 27.7701 67.6098C18.8099 67.6098 11.925 65.2953 7.11548 60.6663C2.37183 56.0036 3.8147e-06 49.2967 3.8147e-06 40.5456V4.82927C3.8147e-06 2.16213 1.96995 0 4.4 0H13.2405C15.6705 0 17.6405 2.16214 17.6405 4.82927V39.1265C17.6405 43.7892 18.4805 47.2018 20.1605 49.3642C21.8735 51.5267 24.4759 52.6079 27.9678 52.6079C31.4596 52.6079 34.0127 51.5436 35.6268 49.4149C37.241 47.2863 38.0481 43.8399 38.0481 39.0758V4.82927Z"></path>
+                    <path d="M86.9 61.8682C86.9 64.5353 84.9301 66.6975 82.5 66.6975H73.6595C71.2295 66.6975 69.2595 64.5353 69.2595 61.8682V4.82927C69.2595 2.16214 71.2295 0 73.6595 0H82.5C84.9301 0 86.9 2.16214 86.9 4.82927V61.8682Z"></path>
+                    <path d="M2.86102e-06 83.2195C2.86102e-06 80.5524 1.96995 78.3902 4.4 78.3902H83.6C86.0301 78.3902 88 80.5524 88 83.2195V89.1707C88 91.8379 86.0301 94 83.6 94H4.4C1.96995 94 0 91.8379 0 89.1707L2.86102e-06 83.2195Z"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <header>
+        <img src="logo.png" class="logo1"></img>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><button class="button1" onclick="location.href='#contact'">Contact</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <div class="bg bg-1"></div>
+        <div class="bg bg-2"></div>
+        <div class="bg bg-3"></div>
+        <h1>Khắc Huy</h1>
+        <div class="bg bg-4"></div>
+        <div class="bg bg-5"></div>
+        <div class="bg bg-6"></div>
+        <div class="bg bg-7"></div>
+        <div class="bg bg-8"></div>
+        <div class="bg bg-9"></div>
+    </div>
+    <section id="hero" class="hero px-">
+        <div class="max-w-7xl mx-auto p-2">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
+                <div class="flex justify-left items-center">
+                    <img src="huy.png" alt="Khac Huy" class="max-w-x2 h-auto">
+                </div>
+                <div class="text-left md:pl-0 px-16 md:px-0">
+                    <div class="md:flex md:items-center md:justify-between">
+                        <div>
+                            <p class="text-x1 ">Hello It's Me</p>
+                            <h1 class="text-5xl font-bold">Khac Huy</h1>
+                            <div class="typing-effect" id="text"></div>
+                            <script>
+                                // ... (your existing JavaScript code)
+                            </script>
+                        </div>
+                    </div>
+    
+                    <p class="mt-4 text-lg font-light">
+                        I am looking forward to developing my career in a creative and dynamic company where I can apply my knowledge and skills to create unique and impressive design products.
+                    </p>
+                    <hr class="my-7 border-white-500"/>
+    
+                    <div>
+                        <p class="text-5x2 font-bold ">  
+                            PER
+                            <span class=" font-light">sonal</span>
+                            INF
+                            <span class="font-light">ormation</span>
+                        </p>
+                        <p class="mt-2 font-light">Nguyen Huynh Khac Huy</p>
+                        <p class="font-light">(84+) 0767111717</p>
+                        <p class="font-light">Khachuy193@gmail.com</p>
+                        <div class="social-links mt-4 md:mt-0">
+                            <a href="https://www.facebook.com/profile.php?id=100045773663561" target="_blank" class="social-link">
+                                <img src="fb.png" alt="Facebook" class="h-8 w-8">
+                            </a>
+                            <a href="https://www.behance.net/khchi" target="_blank" class="social-link">
+                                <img src="be.png" alt="Facebook" class="h-8 w-8">
+                            </a>
+                            <a href="https://www.instagram.com/nguyenhuynhkhachuy193/" target="_blank" class="social-link">
+                                <img src="ig.png" alt="Facebook" class="h-8 w-8">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        /* ... other styles ... */
+        .social-link {
+            transition: transform 0.2s ease, filter 0.2s ease; /* Smooth transitions */
+            display: inline-block; /* Needed for transform to work */
+        }
+    
+        .social-link:hover {
+            transform: scale(1.1); /* Slightly scale up on hover */
+            filter: brightness(1.2); /* Slightly brighten on hover */
+        }
+    
+        .social-link img { /* Optional: Add transition to image inside link */
+            transition: transform 0.2s ease;
+        }
+        .social-link:hover img {
+            transform: rotate(10deg); /* Example: Rotate image on hover */
+        }
+    </style>
+
+                            <script>
+                                const textElement = document.getElementById("text");
+                                const textArray = ["Hello, welcome to my page!", "I am a graphic designer.", "Let's create something amazing together."];
+                                let textIndex = 0;
+                                let charIndex = 0;
+                                let isDeleting = false;
+                            
+                                function typeEffect() {
+                                  const currentText = textArray[textIndex];
+                                  const displayedText = isDeleting
+                                    ? currentText.substring(0, charIndex--)
+                                    : currentText.substring(0, charIndex++);
+                            
+                                  textElement.textContent = displayedText;
+                            
+                                  if (!isDeleting && charIndex === currentText.length) {
+                                    isDeleting = true;
+                                    setTimeout(typeEffect, 1000); // Pause before deleting
+                                  } else if (isDeleting && charIndex === 0) {
+                                    isDeleting = false;
+                                    textIndex = (textIndex + 1) % textArray.length;
+                                    setTimeout(typeEffect, 500); // Pause before typing new text
+                                  } else {
+                                    setTimeout(typeEffect, isDeleting ? 50 : 100);
+                                  }
+                                }
+                            
+                                document.addEventListener("DOMContentLoaded", typeEffect);
+                              </script>
+                        </div>
+                    </div>
+    
+
+
+
+
+
+
+
+
+<div class="line">
+    <div class="neon-line"></div>
+</div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <section id="resume" class="resume">
+        <h2 class="section-title">My Resume</h2>
+        <div class="button-container">
+            <button class="glow-button active" data-image="ed.png" data-content="Nội dung về Giáo dục">EDUCATION</button>
+            <button class="glow-button" data-image="ts.png" data-content="Nội dung về Nghề nghiệp">THE SERVICE   </button>
+            <button class="glow-button" data-image="s.png" data-content="Nội dung về Kỹ năng">SKILLS</button>
+          </div>
+          
+          <div class="content" id="content">
+            <img src="ed.png" alt="Giáo dục">
+            <img src="ed.png" alt="Nội dung về Nghề nghiệp">
+            <img src="ed.png" alt="Giáo dục">
+          </div>
+     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="line">
+    <div class="neon-line"></div>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+ <div class="P">
+    <section id="portfolio" class="portfolio">
+        <h2 class="section-title">My Portfolio</h2>
+        <div class="banner1">
+            <div class="slider" style="--quantity: 8">
+                <div class="item" onclick="openPopup(1)" style="--position: 1"><img src="br.png" alt=""class="clickable-img" data-link="tonali.html"></div>
+                <div class="item" onclick="openPopup(2)" style="--position: 2"><img src="poster.png" alt=""class="clickable-img" data-link="tonali.html"></div>
+                <div class="item" onclick="openPopup(3)" style="--position: 3"><img src="ui.png" alt=""class="clickable-img" data-link="tonali.html"></div>
+                <div class="item" onclick="openPopup(4)" style="--position: 4"><img src="sc.png" alt=""class="clickable-img" data-link="tonali.html"></div>
+                <div class="item" onclick="openPopup(5)" style="--position: 5"><img src="bn.png" alt=""class="clickable-img" data-link="tonali.html"></div>
+                <div class="item" onclick="openPopup(6)" style="--position: 6"><img src="st.png" alt=""class="clickable-img" data-link="tonali.html"></div>
+                <div class="item" onclick="openPopup(7)" style="--position: 7"><img src="lg.png" alt=""class="clickable-img" data-link="tonali.html"></div>
+                <div class="item" onclick="openPopup(8)" style="--position: 8"><img src="2d.png" alt=""class="clickable-img" data-link="tonali.html"></div>
+            </div>
+            <div class="content2">
+                <h1 data-content="PORTFOLIO"><b>PORTFOLIO</b></h1> 
+            </div>
+        </div>
+    </section>
+    <div class="button-row">
+        <button class="button" onclick="location.href='tonali.html'">Tonali</button>
+        <button class="button" onclick="location.href='tonali.html'">Poster</button>
+        <button class="button" onclick="location.href='ui-design.html'">UI</button>
+        <button class="button" onclick="location.href='banner-design.html'">Banner</button>
+        <button class="button" onclick="location.href='logo-design.html'">Logo</button>
+        <button class="button" onclick="location.href='standee-design.html'">Standee</button>
+        <button class="button" onclick="location.href='social-design.html'">Social </button>
+        <button class="button" onclick="location.href='2d-print.html'">2D Printing Product</button>
+    </div>
+ </div>
+
+
+
+
+ <div class="line">
+    <div class="neon-line"></div>
+ </div>
+
+ 
+    
+    
+    
+    
+ <h2 class="section-title" id ="contact">Contact To Me</h2>
+    <div class="parent">
+        <div class="card">
+            <div class="logo">
+                <span class="circle circle1"></span>
+                <span class="circle circle2"></span>
+                <span class="circle circle3"></span>
+                <span class="circle circle4"></span>
+                <span class="circle circle5">
+                    <img src="Logo.png" viewBox="0 0 29.667 31.69" class="svg">
+                        <path id="Path_6" data-name="Path 6" d="M12.827,1.628A1.561,1.561,0,0,1,14.31,0h2.964a1.561,1.561,0,0,1,1.483,1.628v11.9a9.252,9.252,0,0,1-2.432,6.852q-2.432,2.409-6.963,2.409T2.4,20.452Q0,18.094,0,13.669V1.628A1.561,1.561,0,0,1,1.483,0h2.98A1.561,1.561,0,0,1,5.947,1.628V13.191a5.635,5.635,0,0,0,.85,3.451,3.153,3.153,0,0,0,2.632,1.094,3.032,3.032,0,0,0,2.582-1.076,5.836,5.836,0,0,0,.816-3.486Z" transform="translate(0 0)"></path>
+                        <path id="Path_7" data-name="Path 7" d="M75.207,20.857a1.561,1.561,0,0,1-1.483,1.628h-2.98a1.561,1.561,0,0,1-1.483-1.628V1.628A1.561,1.561,0,0,1,70.743,0h2.98a1.561,1.561,0,0,1,1.483,1.628Z" transform="translate(-45.91 0)"></path>
+                        <path id="Path_8" data-name="Path 8" d="M0,80.018A1.561,1.561,0,0,1,1.483,78.39h26.7a1.561,1.561,0,0,1,1.483,1.628v2.006a1.561,1.561,0,0,1-1.483,1.628H1.483A1.561,1.561,0,0,1,0,82.025Z" transform="translate(0 -51.963)"></path>
+                      </img>
+                </span>
+
+            </div>
+            <div class="glass"></div>
+            <div class="contenttheln">
+                <span class="title">Contact Me!</span>
+                <span class="text">Phone: (+84) 0767711717</span>
+                <span class="text">Email: Khachuy193@gmail.com</span>
+                                
+            </div>
+            <div class="bottom">
+                
+                <div class="social-buttons-container">
+                      <button class="social-button .social-button1">
+                        <a href="https://www.facebook.com/profile.php?id=100045773663561">
+                            <svg viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"  class="svg">
+                                <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"></path>
+                              </svg>
+                        </a>
+                       </button>
+                      <button class="social-button .social-button2">
+                        <a href="https://www.behance.net/khchi">
+                            <svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg" class="svg">
+                                <path d="M232 237.2c31.8-15.2 48.4-38.2 48.4-74 0-70.6-52.6-87.8-113.3-87.8H0v354.4h171.8c64.4 0 124.9-30.9 124.9-102.9 0-44.5-21.1-77.4-64.7-89.7zM77.9 135.9H151c28.1 0 53.4 7.9 53.4 40.5 0 30.1-19.7 42.2-47.5 42.2h-79v-82.7zm83.3 233.7H77.9V272h84.9c34.3 0 56 14.3 56 50.6 0 35.8-25.9 47-57.6 47zm358.5-240.7H376V94h143.7v34.9zM576 305.2c0-75.9-44.4-139.2-124.9-139.2-78.2 0-131.3 58.8-131.3 135.8 0 79.9 50.3 134.7 131.3 134.7 61.3 0 101-27.6 120.1-86.3H509c-6.7 21.9-34.3 33.5-55.7 33.5-41.3 0-63-24.2-63-65.3h185.1c.3-4.2 .6-8.7 .6-13.2zM390.4 274c2.3-33.7 24.7-54.8 58.5-54.8 35.4 0 53.2 20.8 56.2 54.8H390.4z"></path>
+                              </svg>
+                        </a>
+                      </button>
+                      <button class="social-button .social-button3">
+                        <a href="https://www.instagram.com/nguyenhuynhkhachuy193/">
+                            <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" class="svg">
+                                <path d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z"></path>
+                              </svg>
+                        </a>
+                      </button>
+                </div>
+                <div class="view-more">
+                    <button class="view-more-button">Come Here</button>
+                    <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        window.addEventListener("scroll", function () {
+            let header = document.querySelector("header");
+            if (window.scrollY > 50) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+        </script>
+    
+    
+
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <footer>
+        <p>&copy; 2025 Khac Huy Designer | Designed by Figma and Visual Studio Code</p>
+    </footer>
+
+
+
+
+
+
+
+
+     
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const infoContainer = document.querySelector(".info-container");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        infoContainer.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.3 });
+            observer.observe(infoContainer);
+        });
+    </script>
+
+
+
+
+
+    <script>
+        document.querySelectorAll('.clickable-img').forEach(img => {
+            img.addEventListener('click', function() {
+                window.location.href = this.getAttribute('data-link');
+            });
+        });
+        // liên kếtkết
+    </script>
+
+
+
+
+
+    
+
+
+
+
+ <script src="script.js"></script>
+
+
+
+
+
+
+ 
+
+
+ <script>
+    const buttons = document.querySelectorAll('.glow-button');
+    const contentDiv = document.getElementById('content');
+    
+    // Hiển thị hình ảnh đầu tiên khi trang web được tải
+    window.addEventListener('DOMContentLoaded', () => {
+      const firstImageSrc = document.querySelector('.glow-button.active').dataset.image;
+      contentDiv.innerHTML = '<img src="' + firstImageSrc + '" alt="Giáo dục">';
+    });
+    
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        const imageSrc = button.dataset.image;
+        contentDiv.innerHTML = '<img src="' + imageSrc + '" alt="' + button.textContent + '">';
+      });
+    });
+    </script>
+
+
+    <script>
+        function showModal(content) {
+            const modal = document.getElementById('modal');
+            document.getElementById('modal-content').innerText = content;
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+      <script src="https://cdn.tailwindcss.com">
+  </script>
+
+
+
+<script>
+    function openContent() {
+      document.getElementById('contentPage').style.display = 'flex';
+    }
+
+    function closeContent() {
+      document.getElementById('contentPage').style.display = 'none';
+    }
+  </script>
+  <script>
+    function closeModal() {
+             document.getElementById('modal').classList.add('hidden');
+         }
+</script>
+<script src="app.js"></script>
+<script>
+    window.addEventListener("load", function() {
+        const loadingScreen = document.querySelector(".loading-overlay");
+        const content = document.querySelector(".content");
+
+        setTimeout(() => {
+            loadingScreen.classList.add("hidden");
+            content.style.display = "block";
+        }, 500); // Thêm độ trễ nhỏ để hiệu ứng mượt hơn
+    });
+</script>
+<div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+ </html>
+ 
+  
+ 
+    
+</body>
+</html>
