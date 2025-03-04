@@ -16,13 +16,19 @@
     justify-content: center;
     align-items: center;
     font-family: monospace;
-    
+   
 }
-.anh{
+.img{
     margin-top: 150px;
     margin-bottom: 150px;
 }
-
+/* Responsive chỉnh kích thước chữ nhỏ lại trên màn hình nhỏ */
+@media (max-width: 768px) {
+    footer {
+        font-size: 16px;
+        padding: 20px 0;
+    }
+}
 
 
 
@@ -175,6 +181,7 @@ nav a:hover {
         }
 
 
+
         body {
     display: flex;
     flex-direction: column;
@@ -251,8 +258,8 @@ footer p:hover {
     
 <body>
       
-        <div class="anh">
-            <img src="bn im.png" alt="">
+        <div class="img">
+            <img src="st im.png" alt="">
         </div>
         <footer>
             <p>&copy; 2025 Khac Huy Designer | Designed by Figma and Visual Studio Code</p>

@@ -9,18 +9,21 @@
     </head>
     <style>
    body{
-    background: linear-gradient(-135deg, #002c3f, #000000, #002c3f); /* Nền tối gradient */
+    background: linear-gradient(-90deg, #002c3f, #000000, #000000); /* Nền tối gradient */
     min-height: 30vh;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: monospace;
+    padding-top: 150px;
+    
     
 }
-.anh{
+.img{
     margin-top: 150px;
     margin-bottom: 150px;
+
 }
 
 
@@ -137,7 +140,7 @@ nav a:hover {
         border-radius: 50%;
         display: block;
         width: 20em;
-        height: 20em;
+        height: 30em;
         left: -5em;
         text-align: center;
         transition: box-shadow 0.5s ease-out;
@@ -173,6 +176,98 @@ nav a:hover {
             background: #29ABE2;
             color: #000;
         }
+
+
+
+
+
+
+ .container {
+    display: flex;
+    width: 80%;
+    max-width: 1300px;
+    background: rgba(0, 78, 126, 0.2);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 67, 112, 0.87);
+    margin: 10px auto; /* Căn giữa và thêm margin 10px trên dưới */
+    padding: 10px 0; /* Padding trên dưới 10px */
+    justify-content: center; /* Căn giữa nội dung */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+
+        .image-box {
+            flex: 1;
+            background: url('your-image.jpg') no-repeat center center/cover;
+            min-height: 300px;
+            border-radius: 10px;
+            padding-left: 25px;
+        }
+
+        .content-box {
+            flex: 1;
+            padding: 40px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .content-box h2 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #29ABE2;
+        }
+
+        .content-box p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .content-box a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #11739c;
+    border-radius: 25px;
+    color: #29ABE2;
+    overflow: hidden;
+    transition: color 0.3s ease-out, border-color 0.3s ease-out;
+}
+
+.content-box a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 400%;
+    background: #29ABE2;
+    transition: all 0.5s ease-out;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: -1;
+}
+
+.content-box a:hover {
+    color: #fff;
+    border-color: #29ABE2;
+}
+
+.content-box a:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+        
+
 
 
         body {
@@ -213,6 +308,7 @@ footer p:hover {
         padding: 20px 0;
     }
 }
+
     </style>
     
     
@@ -250,14 +346,40 @@ footer p:hover {
     
     
 <body>
-      
-        <div class="anh">
-            <img src="bn im.png" alt="">
+    <div class="container">
+        <img class="image-box"src="alter.png"></img>
+        <div class="content-box">
+            <h2>Alter Audio</h2>
+            <p>
+                Tích hợp nhiều tính năng thay đổi giọng nói và xử lý âm thanh đầy sáng tạo,
+                Alter Audio hy vọng trở thành không gian lý tưởng cho thế hệ trẻ sáng tạo và những người yêu công nghệ giọng nói. Với Alter Audio, bạn có thể khám phá và trải nghiệm những tính năng độc đáo,
+                 học hỏi thêm về cách sử dụng và điều chỉnh giọng nói, cũng như mở rộng hiểu biết về âm thanh và những tiềm năng mới mà nó mang lại.
+            </p>
+            <a onclick="location.href='alter.html'" class="button1">View More</a>
         </div>
+    </div>
+    <div class="container">
+        <img class="image-box"src="meti.png"></img>
+        <div class="content-box">
+            <h2>Game Meti-chan</h2>
+            <p>
+                Meti-chan lấy cảm hứng từ trò chơi nuôi thú ảo huyền thoại,
+                 kết hợp văn hóa anime Nhật Bản. Với trang phục đặc trưng và bối cảnh đời sống quen thuộc, Meti-chan đưa người chơi về thế kỷ 15, thời kỳ hoàng kim của thú ảo.
+                 Không chỉ là trò chơi giải trí, Meti-chan còn mang đậm dấu ấn anime, kết nối văn hóa Nhật Bản với Việt Nam.
+            </p>
+            <a onclick="location.href='meti.html'" class="button1">View More</a>
+        </div>
+    </div>
+       
+     
+
+
+
+
+
         <footer>
             <p>&copy; 2025 Khac Huy Designer | Designed by Figma and Visual Studio Code</p>
         </footer>
-     
 
 <script src="tonali.js"></script>
   
