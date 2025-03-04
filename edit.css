@@ -788,6 +788,11 @@ transform: translateY(-1px);
   justify-content: center;
   align-items: center;
 }
+.bg {
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
 
 
 
