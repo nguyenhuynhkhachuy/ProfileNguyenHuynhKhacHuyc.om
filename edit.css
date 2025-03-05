@@ -76,6 +76,12 @@ body {
   .container {
       flex-direction: column;
       align-items: center;
+      width: 100vw;
+      height: 177.78vw; /* 9:16 tỷ lệ */
+      max-width: 500px;
+      max-height: 888px;
+      overflow: hidden; /* Tránh cuộn trang */
+      margin: 0 auto; /* Căn giữa nội dung */
   }
   
   .box {
@@ -331,7 +337,7 @@ body {
         font-weight: bold;
         color: #29ABE2;
       }
-      @media (max-width: 600px) {
+      @media screen and (max-width: 768px) {
         .typing-effect {
           font-size: 20px;
         }
@@ -347,6 +353,7 @@ body {
           gap: 5px;
         }
       }
+      
       
       
       
@@ -422,7 +429,7 @@ body {
         margin-top: 0px;
       }
 
-      @media (max-width: 600px) {
+      @media screen and (max-width: 768px) {
         .button-container {
             flex-direction: column;
             gap: 10px;
@@ -557,7 +564,7 @@ body::before{
 .banner1 .content2 h2{
   font-size: 2Rem;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 768px) {
   .banner1 .slider{
       width: 160px;
       height: 200px;
@@ -568,7 +575,7 @@ body::before{
       font-size: 4em;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .banner1 .slider{
       width: 100px;
       height: 150px;
