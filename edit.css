@@ -1,4 +1,12 @@
-  nav ul {
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    nav ul {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
@@ -11,112 +19,54 @@
         padding: 8px 12px;
     }
 }
-/* Định nghĩa biến màu để dễ quản lý */
-:root {
-  --color-primary: #fc6d6d;
-  --color-secondary: #f0f0f0;
-  --text-color: #333;
-}
-
-/* Reset mặc định */
+      /* Reset CSS */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Global styles */
 body {
-  background-color: var(--color-secondary);
-  color: var(--text-color);
-  text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000000, #000307eb); /* Nền tối gradient */
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
 }
-
-h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: var(--color-primary);
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: var(--color-primary);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0px 5px 15px rgba(252, 109, 109, 0.3);
-}
-
-/* Responsive tối ưu */
-@media screen and (max-width: 768px) {
-  h1 {
-      font-size: 2.5rem;
-  }
-  .button {
-      font-size: 0.9rem;
-      padding: 10px 20px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  h1 {
-      font-size: 2rem;
-  }
-  .button {
-      font-size: 0.8rem;
-      padding: 8px 16px;
-  }
-}
-
-
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .box {
-  width: 30%;
-  padding: 20px;
-  margin: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  transition: 0.3s ease;
+    width: 30%;
+    padding: 20px;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: 0.3s ease;
 }
 
 .box:hover {
-  background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* Responsive Layout */
-@media screen and (max-width: 500px) {
-  .container {
-      flex-direction: column;
-      align-items: center;
-      width: 100vw;
-      height: 177.78vw; /* 9:16 tỷ lệ */
-      max-width: 500px;
-      max-height: 888px;
-      overflow: hidden; /* Tránh cuộn trang */
-      margin: 0 auto; /* Căn giữa nội dung */
-  }
-  
-  .box {
-      width: 90%;
-  }
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .box {
+        width: 90%;
+    }
 }
 
       header {
@@ -191,7 +141,7 @@ h1 {
         display: none;
     }
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 768px) {
         header {
             flex-direction: row-reverse;
         }
@@ -302,9 +252,6 @@ h1 {
       .text-5xl {
         font-size: 90cm;
       }
-      .anhdaidien{
-
-      }
       
       .hero {
           display: flex;
@@ -356,9 +303,6 @@ h1 {
         font-size: 0.75cm;
         color: #ffffff;
       }
-      .font-bold{
-        color: #29ABE2;
-      }
       .text-5x2{
         color:#29ABE2;
       }
@@ -367,25 +311,6 @@ h1 {
         font-weight: bold;
         color: #29ABE2;
       }
-      @media screen and (max-width: 500px) {
-        .typing-effect {
-          font-size: 20px;
-        }
-        .font-bold{
-          color: #29ABE2;
-          font-size: 30px;
-        }
-        .font-light{
-          font-size: 25px;
-           color: #ffffff;
-        }
-        .hero p{
-          gap: 5px;
-        }
-      }
-      
-      
-      
       
 
 
@@ -459,7 +384,7 @@ h1 {
         margin-top: 0px;
       }
 
-      @media screen and (max-width: 500px) {
+      @media (max-width: 600px) {
         .button-container {
             flex-direction: column;
             gap: 10px;
@@ -475,7 +400,7 @@ h1 {
     }
     .content{
       padding-left: 30px;
-      padding-right: 30px;
+      padding-right: 0px;
     }
     
 
@@ -594,7 +519,7 @@ body::before{
 .banner1 .content2 h2{
   font-size: 2Rem;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1023px) {
   .banner1 .slider{
       width: 160px;
       height: 200px;
@@ -605,7 +530,7 @@ body::before{
       font-size: 4em;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .banner1 .slider{
       width: 100px;
       height: 150px;
@@ -927,21 +852,7 @@ body::before{
       }
       
 
-  /* Trên điện thoại, tự động bật hiệu ứng khi phần tử xuất hiện */
-@media (max-width: 768px) {
-  .hover-section {
-      animation: hoverEffect 1s ease-in-out forwards;
-  }
-
-  @keyframes hoverEffect {
-      from {
-          transform: scale(1);
-      }
-      to {
-          transform: scale(1.1);
-      }
-  }
-}
+  
 
 
 
@@ -960,52 +871,35 @@ body::before{
 
 
 
-footer {
-  background: linear-gradient(135deg, #000000, #000c11);
-  color: #fff;
-  text-align: center;
-  padding: 15px 0;
-  font-size: 18px;
-  font-weight: 500;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-footer p {
-  transition: color 0.3s ease-in-out;
-}
-
-footer p:hover {
-  color: #00A8FF;
-}
-
-.xanh {
-  color: #00A8FF;
-}
-
-@media (max-width: 768px) {
-  footer {
-    font-size: 15px;
-    padding: 20px 0;
-  }
-
-  .xanh {
-    color: #00A8FF;
-  }
-
-  /* Xuống hàng cho phần "Figma and Visual Studio Code" trên màn hình nhỏ */
-  .footer-text {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .footer-text span {
-    color: #00A8FF;
-  }
-}
-
-
+    footer {
+        background: linear-gradient(135deg, #000000, #000c11); /* Nền tối gradient */
+        color: #fff; /* Chữ màu trắng */
+        text-align: center;
+        padding: 15px 0;
+        font-size: 18px;
+        font-weight: 500;
+       
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    /* Hiệu ứng hover cho chữ */
+    footer p {
+        transition: color 0.3s ease-in-out;
+    }
+    
+    footer p:hover {
+        color: #00A8FF; /* Đổi sang màu xanh khi hover */
+    }
+    
+    /* Responsive chỉnh kích thước chữ nhỏ lại trên màn hình nhỏ */
+    @media (max-width: 768px) {
+        footer {
+            font-size: 16px;
+            padding: 20px 0;
+        }
+    }
     
 
 
@@ -1026,13 +920,14 @@ footer p:hover {
   }
   
   /* Responsive cho màn hình nhỏ */
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 768px) {
       .section-title {
           font-size: 1.5cm; /* Giảm kích thước chữ trên điện thoại */
           padding: 10px;
       }
   }
   
+
 
 
 
