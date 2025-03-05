@@ -19,8 +19,7 @@
         padding: 8px 12px;
     }
 }
-      /* Reset CSS */
-/* Reset mặc định */
+    /* Reset mặc định */
 * {
   margin: 0;
   padding: 0;
@@ -37,47 +36,40 @@ body {
 }
 
 /* Responsive cho điện thoại */
-@media screen and (max-width: 768px) {
-  body {
-    width: 500px;
-    height: 7300px;
-    overflow: hidden; /* Tránh cuộn trang */
-    margin: 0 auto; /* Căn giữa nội dung */
-  }
-}
+
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .box {
-    width: 30%;
-    padding: 20px;
-    margin: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    transition: 0.3s ease;
+  width: 30%;
+  padding: 20px;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: 0.3s ease;
 }
 
 .box:hover {
-    background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* Responsive Layout */
 @media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .box {
-        width: 90%;
-    }
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .box {
+      width: 90%;
+  }
 }
 
       header {
@@ -322,6 +314,9 @@ body {
         font-weight: bold;
         color: #29ABE2;
       }
+
+      
+      
       
 
 
@@ -411,7 +406,7 @@ body {
     }
     .content{
       padding-left: 30px;
-      padding-right: 0px;
+      padding-right: 30px;
     }
     
 
@@ -863,7 +858,21 @@ body::before{
       }
       
 
-  
+  /* Trên điện thoại, tự động bật hiệu ứng khi phần tử xuất hiện */
+@media (max-width: 768px) {
+  .hover-section {
+      animation: hoverEffect 1s ease-in-out forwards;
+  }
+
+  @keyframes hoverEffect {
+      from {
+          transform: scale(1);
+      }
+      to {
+          transform: scale(1.1);
+      }
+  }
+}
 
 
 
@@ -882,35 +891,45 @@ body::before{
 
 
 
-    footer {
-        background: linear-gradient(135deg, #000000, #000c11); /* Nền tối gradient */
-        color: #fff; /* Chữ màu trắng */
-        text-align: center;
-        padding: 15px 0;
-        font-size: 18px;
-        font-weight: 500;
-       
-        position: relative;
-        bottom: 0;
-        width: 100%;
-    }
-    
-    /* Hiệu ứng hover cho chữ */
-    footer p {
-        transition: color 0.3s ease-in-out;
-    }
-    
-    footer p:hover {
-        color: #00A8FF; /* Đổi sang màu xanh khi hover */
-    }
-    
-    /* Responsive chỉnh kích thước chữ nhỏ lại trên màn hình nhỏ */
-    @media (max-width: 768px) {
-        footer {
-            font-size: 16px;
-            padding: 20px 0;
-        }
-    }
+footer {
+  background: linear-gradient(135deg, #000000, #000c11); /* Nền tối gradient */
+  color: #fff; /* Chữ màu trắng */
+  text-align: center;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Hiệu ứng hover cho chữ */
+footer p {
+  transition: color 0.3s ease-in-out;
+}
+
+footer p:hover {
+  color: #00A8FF; /* Đổi sang màu xanh khi hover */
+}
+
+/* Mặc định phần "xanh" có màu xanh */
+.xanh {
+  color: #00A8FF;
+}
+
+/* Responsive: Chỉnh kích thước chữ nhỏ lại trên màn hình nhỏ */
+@media (max-width: 768px) {
+  footer {
+      font-size: 15px;
+      padding: 20px 0;
+  }
+
+  /* Đảm bảo phần chữ xanh vẫn có màu xanh trên điện thoại */
+  .xanh {
+      color: #00A8FF;
+  }
+}
+
     
 
 
@@ -938,7 +957,6 @@ body::before{
       }
   }
   
-
 
 
 
