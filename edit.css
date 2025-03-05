@@ -19,18 +19,56 @@
         padding: 8px 12px;
     }
 }
-      * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-      }
-      body {
-          font-family: 'Poppins', sans-serif;
-          background: linear-gradient(135deg, #000000, #000307eb); /* Nền tối gradient */
-          color: #fff;
-          line-height: 1.6;
-          text-align: center;
-      }
+      /* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000000, #000307eb); /* Nền tối gradient */
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    width: 30%;
+    padding: 20px;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.box:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .box {
+        width: 90%;
+    }
+}
+
       header {
         background-color: rgba(0, 0, 0, 0);
         padding: 1rem 2rem;
