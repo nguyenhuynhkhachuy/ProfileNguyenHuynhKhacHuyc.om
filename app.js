@@ -1,48 +1,75 @@
-let listBg = document.querySelectorAll('.bg');
-let listTab = document.querySelectorAll('.tab');
-let titleBanner = document.querySelector('.banner h1');
+document.addEventListener("DOMContentLoaded", function () {
+  let listBg = document.querySelectorAll('.bg');
+  let listTab = document.querySelectorAll('.tab');
+  let titleBanner = document.querySelector('.banner h1');
 
-let lastScrollY = 0;
-let ticking = false;
+  if (!listBg.length || !titleBanner) {
+      console.error("Không tìm thấy phần tử cần thiết trong DOM.");
+      return;
+  }
 
-function handleScroll() {
-    let top = lastScrollY;
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+  let lastTranslateY = new Array(listBg.length).fill(0); // Lưu giá trị translateY cũ
 
-    listBg.forEach((bg, index) => {
-        if (index === 8) return; // Giữ nguyên vị trí của hình số 8
+  function handleScroll() {
+      let top = window.scrollY;
 
-        let speed = index === 0 ? 0.5 : index / 1.5;
-        let translateY = top * speed;
+      for (let i = 0; i < listBg.length; i++) {
+          if (i === 8) continue; // Giữ nguyên vị trí bg-8
 
-        if (bg.style.transform !== `translateY(${translateY}px)`) {
-            bg.style.transform = `translateY(${translateY}px)`;
-        }
-    });
+          let speed = i === 0 ? 0.5 : i / 1.5;
+          let translateY = top * speed;
 
-    let titleTranslateY = top * 2;
-    if (titleBanner.style.transform !== `translateY(${titleTranslateY}px)`) {
-        titleBanner.style.transform = `translateY(${titleTranslateY}px)`;
-    }
+          // Chỉ cập nhật nếu giá trị thay đổi
+          if (lastTranslateY[i] !== translateY) {
+              listBg[i].style.transform = `translateY(${translateY}px)`;
+              lastTranslateY[i] = translateY;
+          }
+      }
 
-    listTab.forEach(tab => {
-        if (tab.offsetTop - top < 550) {
-            tab.classList.add('active');
-        } else {
-            tab.classList.remove('active');
-        }
-    });
+      let titleTranslateY = top * 2;
+      if (parseFloat(titleBanner.style.transform.replace("translateY(", "").replace("px)", "")) !== titleTranslateY) {
+          titleBanner.style.transform = `translateY(${titleTranslateY}px)`;
+      }
 
-    ticking = false;
-}
+      ticking = false;
+  }
 
-window.addEventListener("scroll", () => {
-    lastScrollY = window.scrollY;
+  let timeout = null;
+  function onScroll() {
+      lastScrollY = window.scrollY;
 
-    if (!ticking) {
-        requestAnimationFrame(handleScroll);
-        ticking = true;
-    }
+      if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(handleScroll);
+      }
+
+      // Debounce để giảm lag khi cuộn nhanh
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+          requestAnimationFrame(handleScroll);
+      }, 50);
+  }
+
+  // Dùng passive event listener để tối ưu
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  // Sử dụng IntersectionObserver để tối ưu kiểm tra tab
+  let observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          entry.target.classList.toggle('active', entry.isIntersecting);
+      });
+  }, { threshold: 0.3 });
+
+  listTab.forEach(tab => observer.observe(tab));
+
+  // Chạy hàm lần đầu để cập nhật trạng thái ban đầu
+  handleScroll();
 });
+
+
+
 
 
 

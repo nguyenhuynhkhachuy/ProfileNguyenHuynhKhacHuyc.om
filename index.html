@@ -95,6 +95,56 @@
         <div class="bg bg-8"></div>
         <div class="bg bg-9"></div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let listBg = document.querySelectorAll('.bg');
+            let titleBanner = document.querySelector('.banner h1');
+            let lastScrollY = 0;
+            let ticking = false;
+
+            function handleScroll() {
+                let top = window.scrollY;
+
+                listBg.forEach((bg, index) => {
+                    if (index === 8) return; // Giữ nguyên vị trí của bg-8
+
+                    let speed = index === 0 ? 0.5 : index / 1.8;
+                    let translateY = top * speed;
+
+                    bg.style.transform = `translateY(${translateY}px)`;
+                });
+
+                if (titleBanner) {
+                    let titleTranslateY = top * 1.5;
+                    titleBanner.style.transform = `translateY(${titleTranslateY}px)`;
+                }
+
+                ticking = false;
+            }
+
+            window.addEventListener("scroll", () => {
+                lastScrollY = window.scrollY;
+
+                if (!ticking) {
+                    requestAnimationFrame(handleScroll);
+                    ticking = true;
+                }
+            });
+
+            handleScroll();
+        });
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <section id="hero" class="hero px-4 py-10">
         <div class="max-w-7xl mx-auto p-2">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
@@ -451,6 +501,7 @@
 
 
  <script src="script.js"></script>
+ <script src="app.js"></script>
 
 
 
