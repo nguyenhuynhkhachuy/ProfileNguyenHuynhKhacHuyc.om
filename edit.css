@@ -1,13 +1,24 @@
-@media (max-width: 768px) {  
-  .container {  
-      flex-direction: column;  
-  }  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .button1 {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
 }
-
-
-      
-      
-      
       * {
           margin: 0;
           padding: 0;
@@ -21,9 +32,9 @@
           text-align: center;
       }
       header {
-        background-color: rgba(0, 0, 0, 0); /* Trong suốt nhẹ */
+        background-color: rgba(0, 0, 0, 0);
         padding: 1rem 2rem;
-        position: fixed; /* Giữ cố định khi cuộn */
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -33,53 +44,102 @@
         align-items: center;
         transition: background-color 0.4s ease-in-out, padding 0.3s ease-in-out;
     }
-    
+
     header.scrolled {
-        background-color: #00000080; /* Đổi màu nền khi cuộn */
+        background-color: #00000080;
         padding: 0.5rem 2rem;
     }
-    
+
     .logo1 {
-        height: 50px; /* Điều chỉnh kích thước logo */
+        height: 50px;
     }
-    
-    nav ul {
+
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 30px;
+        height: 4px;
+        background-color: #ffffff;
+        margin: 5px 0;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-links ul {
         list-style: none;
         display: flex;
         gap: 2rem;
-        font-size: 1.2rem;
-        margin-right: 50px;
     }
-    
-    nav a {
+
+    .nav-links li {
+        padding: 15px 0;
+    }
+
+    .nav-links a {
         color: #29ABE2;
         text-decoration: none;
         font-weight: 600;
         transition: color 0.3s, transform 0.2s;
+        font-size: 1.5rem;
     }
-    
-    nav a:hover {
+
+    .nav-links a:hover {
         color: #ffffff;
         transform: scale(1.1);
     }
-          .contact-button1 {
-              background-color: #29ABE2;
-              color: #ffffff;
-              border: none;
-              padding: 0.5rem 1rem;
-              cursor: pointer;
-              font-weight: 600;
-              border-radius: 5px;
-              transition: background-color 0.3s, transform 0.3s;
-              font-size: 1.5rem;
-          }
-          .contact-button1:hover {
-              background-color: #29ABE2;
-              transform: scale(1.1);
-              color: #000000;
-              
-          }
-          
+
+    .button1 {
+        font-size: 1.5rem;
+    }
+
+    .menu-close {
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        header {
+            flex-direction: row-reverse;
+        }
+
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-links.show {
+            display: flex;
+        }
+
+        .menu-close {
+            display: block;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+
+        .menu-toggle {
+            display: flex;
+        }
+    }
           
     
     
@@ -233,7 +293,6 @@
     
     
     
-    
       .resume{
         display: flex;
         gap: 20px;
@@ -287,8 +346,25 @@
         margin-top: 0px;
       }
 
-
-
+      @media (max-width: 600px) {
+        .button-container {
+            flex-direction: column;
+            gap: 10px;
+        }
+        .glow-button {
+            width: 100%; /* Giảm chiều rộng */
+            max-width: 280px; /* Giới hạn kích thước tối đa nhỏ hơn */
+            height: 50px; /* Giảm chiều cao để làm thon hơn */
+            font-size: 28px; /* Giảm kích thước chữ một chút */
+            padding: 0 50px; /* Điều chỉnh padding cho cân đối */
+            border-radius: 20px; /* Bo tròn nhẹ hơn */
+        }
+    }
+    .content{
+      padding-left: 30px;
+      padding-right: 0px;
+    }
+    
 
 
 
@@ -434,30 +510,36 @@ body::before{
   margin-top: 100px;
 }
 .button {
-padding: 1em 2em;
-font-size: 16px;
-text-transform: uppercase;
-letter-spacing: 2.5px;
-font-weight: bold;
-border: none;
-border-radius: 45px;
-box-shadow: 0px 8px 15px #15729ac7;
-transition: all 0.5s ease 0s;
-cursor: pointer;
-outline: none;
-border: 2px solid #00bfff; /* Viền xanh */
+  padding: 1em 2em;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px #15729ac7;
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid #00bfff;
+  min-width: 180px; /* Đảm bảo tất cả button có cùng chiều rộng */
+  height: 50px; /* Đảm bảo chiều cao cố định */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button:hover {
-background-color: #29ABE2;
-box-shadow: 0px 15px 20px #00c8ff;
-color: #fff;
-transform: translateY(-7px);
+  background-color: #29ABE2;
+  box-shadow: 0px 15px 20px #00c8ff;
+  color: #fff;
+  transform: translateY(-7px);
 }
 
 .button:active {
-transform: translateY(-1px);
+  transform: translateY(-1px);
 }
+
 .portfolio{
   margin-bottom: 50px;
 }
@@ -519,7 +601,7 @@ transform: translateY(-1px);
       }
       .contenttheln .text {
         display: block;
-        color: #1f789e;
+        color: #ffffff;
         font-size: 20px;
         margin-top: 0px;
         text-align: left;
@@ -697,9 +779,41 @@ transform: translateY(-1px);
       .view-more-button{
         font-size: 20px;
       }
-    
-        
-  
+      @media screen and (max-width: 768px) {
+        .parent {
+          width: 90%;
+          height: auto;
+          margin: 20px auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      
+        .card {
+          width: 400px;
+          height: 300px;
+          margin: 0 auto;
+          
+          transition: all 0.5s ease-in-out;
+        }
+      }
+      
+      @keyframes hoverEffect {
+        0% {
+          transform: scale(1);
+          box-shadow: none;
+        }
+        100% {
+          transform: scale(1.05);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+      }
+      
+      .card.in-view {
+        animation: hoverEffect 0.5s forwards;
+      }
+      
+
   
 
 
@@ -754,45 +868,27 @@ transform: translateY(-1px);
 
 
 
-.section-title{
-    font-size: 3cm;
-    color: #29ABE2;
-    color: #08b5ff;
-    text-shadow: 
-    0 0 5px #2082ac, 
-    0 0 10px #248ebb, 
-    0 0 10px #2187b3, 
-    0 0 20px #1d82ac;
-    align-items: center;
-}
-    
-.neon-line {
-  width: 1300px; /* Độ dài đường kẻ */
-  height: 2px; /* Độ dày của đường kẻ */
-  background: #29ABE2; /* Màu nền */
-  background: #04b3fe; /* Màu nền */
-  padding: 2px; /* Padding xung quanh */
-  /* Margin xung quanh */
-  margin-top: 100px;
-  margin-bottom: 25px;
- 
-  box-shadow: 
-    0 0 5px #00ccff, 
-    0 0 10px rgb(0, 187, 255), 
-    0 0 20px rgb(0, 191, 255), 
-    0 0 20px rgb(0, 174, 255);
-}
-.line {
+    .section-title {
+      font-size: 3cm;
+      color: #08b5ff;
+      text-shadow: 
+          0 0 5px #2082ac, 
+          0 0 10px #248ebb, 
+          0 0 10px #2187b3, 
+          0 0 20px #1d82ac;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+  }
   
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.bg {
-  will-change: transform;
-  transition: transform 0.1s linear;
-}
-
+  /* Responsive cho màn hình nhỏ */
+  @media screen and (max-width: 768px) {
+      .section-title {
+          font-size: 1.5cm; /* Giảm kích thước chữ trên điện thoại */
+          padding: 10px;
+      }
+  }
+  
 
 
 

@@ -43,3 +43,26 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".card");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        } else {
+          entry.target.classList.remove("in-view"); // Nếu muốn bỏ hiệu ứng khi cuộn ra ngoài
+        }
+      });
+    },
+    { threshold: 0.5 } // Kích hoạt khi 50% card xuất hiện trong viewport
+  );
+
+  cards.forEach((card) => {
+    observer.observe(card);
+  });
+});
