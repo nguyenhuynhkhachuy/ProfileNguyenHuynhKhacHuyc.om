@@ -19,7 +19,7 @@
         padding: 8px 12px;
     }
 }
-    /* Reset mặc định */
+/* Reset mặc định */
 * {
   margin: 0;
   padding: 0;
@@ -36,6 +36,14 @@ body {
 }
 
 /* Responsive cho điện thoại */
+@media screen and (max-width: 768px) {
+  body {
+    width: 500px;
+    height: 730px;
+    overflow: hidden; /* Tránh cuộn trang */
+    margin: 0 auto; /* Căn giữa nội dung */
+  }
+}
 
 
 .container {
