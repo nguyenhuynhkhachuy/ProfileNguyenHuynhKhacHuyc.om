@@ -266,6 +266,9 @@ body {
       .text-5xl {
         font-size: 90cm;
       }
+      .anhdaidien{
+
+      }
       
       .hero {
           display: flex;
@@ -317,6 +320,9 @@ body {
         font-size: 0.75cm;
         color: #ffffff;
       }
+      .font-bold{
+        color: #29ABE2;
+      }
       .text-5x2{
         color:#29ABE2;
       }
@@ -325,7 +331,22 @@ body {
         font-weight: bold;
         color: #29ABE2;
       }
-
+      @media (max-width: 600px) {
+        .typing-effect {
+          font-size: 20px;
+        }
+        .font-bold{
+          color: #29ABE2;
+          font-size: 30px;
+        }
+        .font-light{
+          font-size: 25px;
+           color: #ffffff;
+        }
+        .hero p{
+          gap: 5px;
+        }
+      }
       
       
       
@@ -903,8 +924,8 @@ body::before{
 
 
 footer {
-  background: linear-gradient(135deg, #000000, #000c11); /* Nền tối gradient */
-  color: #fff; /* Chữ màu trắng */
+  background: linear-gradient(135deg, #000000, #000c11);
+  color: #fff;
   text-align: center;
   padding: 15px 0;
   font-size: 18px;
@@ -914,32 +935,39 @@ footer {
   width: 100%;
 }
 
-/* Hiệu ứng hover cho chữ */
 footer p {
   transition: color 0.3s ease-in-out;
 }
 
 footer p:hover {
-  color: #00A8FF; /* Đổi sang màu xanh khi hover */
+  color: #00A8FF;
 }
 
-/* Mặc định phần "xanh" có màu xanh */
 .xanh {
   color: #00A8FF;
 }
 
-/* Responsive: Chỉnh kích thước chữ nhỏ lại trên màn hình nhỏ */
 @media (max-width: 768px) {
   footer {
-      font-size: 15px;
-      padding: 20px 0;
+    font-size: 15px;
+    padding: 20px 0;
   }
 
-  /* Đảm bảo phần chữ xanh vẫn có màu xanh trên điện thoại */
   .xanh {
-      color: #00A8FF;
+    color: #00A8FF;
+  }
+
+  /* Xuống hàng cho phần "Figma and Visual Studio Code" trên màn hình nhỏ */
+  .footer-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-text span {
+    color: #00A8FF;
   }
 }
+
 
     
 

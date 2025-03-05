@@ -95,107 +95,86 @@
         <div class="bg bg-8"></div>
         <div class="bg bg-9"></div>
     </div>
-    <section id="hero" class="hero px-">
+    <section id="hero" class="hero px-4 py-10">
         <div class="max-w-7xl mx-auto p-2">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
-                <div class="flex justify-left items-center">
-                    <img src="huy.png" alt="Khac Huy" class="max-w-x2 h-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+                <div class="flex justify-left">
+                    <img class="anhdaidien" src="huy.png" alt="Khac Huy" class="max-w-xs h-auto rounded-lg shadow-lg">
                 </div>
-                <div class="text-left md:pl-0 px-16 md:px-0">
-                    <div class="md:flex md:items-center md:justify-between">
-                        <div>
-                            <p class="text-x1 ">Hello It's Me</p>
-                            <h1 class="text-5xl font-bold">Khac Huy</h1>
-                            <div class="typing-effect" id="text"></div>
-                            <script>
-                                // ... (your existing JavaScript code)
-                            </script>
-                        </div>
-                    </div>
-    
-                    <p class="mt-4 text-lg font-light">
-                        I am looking forward to developing my career in a creative and dynamic company where I can apply my knowledge and skills to create unique and impressive design products.
-                    </p>
-                    <hr class="my-7 border-white-500"/>
-    
-                    <div>
-                        <p class="text-5x2 font-bold ">  
-                            PER
-                            <span class=" font-light">sonal</span>
-                            INF
-                            <span class="font-light">ormation</span>
+                <div class="text-left md:pl-0 px-6 md:px-0">
+                    <p class="text-xl">Hello, It's Me</p>
+                    <h1 class="text-5xl font-bold">Khac Huy</h1>
+                    <div class="typing-effect" id="text">&nbsp;</div> <!-- Giữ khoảng trắng -->
+                    <div class="light">
+                        <p class="mt-4 text-lg font-light">
+                            I am looking forward to developing my career in a creative and dynamic company where I can apply my knowledge and skills to create unique and impressive design products.
                         </p>
-                        <p class="mt-2 font-light">Nguyen Huynh Khac Huy</p>
-                        <p class="font-light">(84+) 0767111717</p>
-                        <p class="font-light">Khachuy193@gmail.com</p>
-                        <div class="social-links mt-4 md:mt-0">
-                            <a href="https://www.facebook.com/profile.php?id=100045773663561" target="_blank" class="social-link">
-                                <img src="fb.png" alt="Facebook" class="h-8 w-8">
-                            </a>
-                            <a href="https://www.behance.net/khchi" target="_blank" class="social-link">
-                                <img src="be.png" alt="Facebook" class="h-8 w-8">
-                            </a>
-                            <a href="https://www.instagram.com/nguyenhuynhkhachuy193/" target="_blank" class="social-link">
-                                <img src="ig.png" alt="Facebook" class="h-8 w-8">
-                            </a>
-                        </div>
+                    </div>
+                    
+                    <hr class="my-7 border-gray-500"/>
+
+                    <p class="text-3xl font-bold">
+                        PER<span class="font-light">sonal</span> INF<span class="font-light">ormation</span>
+                    </p>
+                    <div class="light">
+                        <p class="mt-2 font-light2">Nguyen Huynh Khac Huy</p>
+                        <p class="font-light2">(84+) 0767111717</p>
+                        <p class="font-light2">Khachuy193@gmail.com</p>
+                    </div>
+                    
+
+                    <div class="social-links mt-4 flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=100045773663561" target="_blank" class="social-link">
+                            <img src="fb.png" alt="Facebook" class="h-8 w-8">
+                        </a>
+                        <a href="https://www.behance.net/khchi" target="_blank" class="social-link">
+                            <img src="be.png" alt="Behance" class="h-8 w-8">
+                        </a>
+                        <a href="https://www.instagram.com/nguyenhuynhkhachuy193/" target="_blank" class="social-link">
+                            <img src="ig.png" alt="Instagram" class="h-8 w-8">
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <style>
-        /* ... other styles ... */
-        .social-link {
-            transition: transform 0.2s ease, filter 0.2s ease; /* Smooth transitions */
-            display: inline-block; /* Needed for transform to work */
-        }
-    
-        .social-link:hover {
-            transform: scale(1.1); /* Slightly scale up on hover */
-            filter: brightness(1.2); /* Slightly brighten on hover */
-        }
-    
-        .social-link img { /* Optional: Add transition to image inside link */
-            transition: transform 0.2s ease;
-        }
-        .social-link:hover img {
-            transform: rotate(10deg); /* Example: Rotate image on hover */
-        }
-    </style>
 
-                            <script>
-                                const textElement = document.getElementById("text");
-                                const textArray = ["Hello, welcome to my page!", "I am a graphic designer.", "Let's create something amazing!."];
-                                let textIndex = 0;
-                                let charIndex = 0;
-                                let isDeleting = false;
-                            
-                                function typeEffect() {
-                                  const currentText = textArray[textIndex];
-                                  const displayedText = isDeleting
-                                    ? currentText.substring(0, charIndex--)
-                                    : currentText.substring(0, charIndex++);
-                            
-                                  textElement.textContent = displayedText;
-                            
-                                  if (!isDeleting && charIndex === currentText.length) {
-                                    isDeleting = true;
-                                    setTimeout(typeEffect, 1000); // Pause before deleting
-                                  } else if (isDeleting && charIndex === 0) {
-                                    isDeleting = false;
-                                    textIndex = (textIndex + 1) % textArray.length;
-                                    setTimeout(typeEffect, 500); // Pause before typing new text
-                                  } else {
-                                    setTimeout(typeEffect, isDeleting ? 50 : 100);
-                                  }
-                                }
-                            
-                                document.addEventListener("DOMContentLoaded", typeEffect);
-                              </script>
-                        </div>
-                    </div>
+    <script>
+        const textElement = document.getElementById("text");
+        const textArray = ["Hello, welcome to my page!", "I am a graphic designer.", "Let's create something amazing!"];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeEffect() {
+            const currentText = textArray[textIndex];
+
+            if (isDeleting) {
+                charIndex--;
+                textElement.textContent = currentText.substring(0, charIndex);
+            } else {
+                charIndex++;
+                textElement.textContent = currentText.substring(0, charIndex);
+            }
+
+            let typingSpeed = isDeleting ? 50 : 100; // Tốc độ gõ/xóa chữ
+
+            if (!isDeleting && charIndex === currentText.length) {
+                isDeleting = true;
+                typingSpeed = 1000; // Dừng lại 1s trước khi xóa
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % textArray.length;
+                textElement.innerHTML = "&nbsp;"; // Khi xóa hết, giữ khoảng trắng tránh mất layout
+                typingSpeed = 500; // Dừng lại 0.5s trước khi gõ đoạn mới
+            }
+
+            setTimeout(typeEffect, typingSpeed);
+        }
+
+        document.addEventListener("DOMContentLoaded", typeEffect);
+    </script>
+
     
 
 
@@ -298,12 +277,12 @@
     <div class="button-row">
         <button class="button" onclick="location.href='tonali.html'">Branding</button>
         <button class="button" onclick="location.href='poster.html'">Poster</button>
-        <button class="button" onclick="location.href='ui.html'">UI</button>
+        <button class="button" onclick="location.href='ui.html'">UI/UX</button>
         <button class="button" onclick="location.href='banner.html'">Banner</button>
         <button class="button" onclick="location.href='logo.html'">Logo</button>
         <button class="button" onclick="location.href='standee.html'">Standee</button>
         <button class="button" onclick="location.href='sociall.html'">Social </button>
-        <button class="button" onclick="location.href='2d.html'">2D Printing Product</button>
+        <button class="button" onclick="location.href='2d.html'">Other,...</button>
     </div>
  </div>
 
@@ -395,10 +374,12 @@
     
     
     <footer>
-        <p>&copy; 2025 Khac Huy Designer | Designed by </p>
-            <p class="xanh"><span>Figma and Visual Studio Code</span> </p>
+        <p class="footer-text">
+            &copy; 2025 Khac Huy Designer | 
+            <span>Designed by Figma and Visual Studio Code</span>
+        </p>
     </footer>
-
+    
 
  
 
