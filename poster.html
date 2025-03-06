@@ -8,6 +8,15 @@
         <link rel="stylesheet" href="tonali.js">
     </head>
     <style>
+         html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
    body{
     background: linear-gradient(-135deg, #002c3f, #000000, #002c3f); /* Nền tối gradient */
     min-height: 30vh;
@@ -220,6 +229,10 @@ footer p:hover {
     footer {
         font-size: 16px;
         padding: 20px 0;
+    }
+    img {
+        max-width: 50%;  /* Giảm kích thước ảnh trên màn hình nhỏ */
+        transform: scale(0.5); /* Thu nhỏ ảnh 90% */
     }
 }
 
