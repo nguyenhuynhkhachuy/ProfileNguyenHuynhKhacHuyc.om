@@ -356,8 +356,16 @@ background: rgba(255, 255, 255, 0.2);
      .font-light{
       font-size: 0.4cm;
      }
-     
+     .social-links a {
+      transform: scale(1.2); /* Tăng kích thước mặc định */
   }
+
+  .social-links a:hover {
+      transform: scale(1.6) rotate(30deg); /* Tăng kích thước khi hover */
+  }
+}
+     
+  
   
     
     
