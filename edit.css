@@ -590,8 +590,8 @@ font-size: 2Rem;
 }
 @media screen and (max-width: 767px) {
 .banner1 .slider{
-    width: 140px;
-    height: 160px;
+    width: 100px;
+    height: 100px;
     left: calc(50% - 50px);
 }
 .banner1 .content2 h1{
