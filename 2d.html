@@ -8,6 +8,15 @@
         <link rel="stylesheet" href="tonali.js">
     </head>
     <style>
+         html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
    body{
     background: linear-gradient(-135deg, #002c3f, #000000, #002c3f); /* Nền tối gradient */
     min-height: 30vh;
@@ -21,7 +30,10 @@
 .anh{
     margin-top: 150px;
     margin-bottom: 150px;
+    
 }
+
+
 /* Responsive chỉnh kích thước chữ nhỏ lại trên màn hình nhỏ */
 @media (max-width: 768px) {
     footer {
@@ -29,8 +41,6 @@
         padding: 20px 0;
     }
 }
-
-
 
 
 
@@ -182,6 +192,7 @@ nav a:hover {
 
 
 
+
         body {
     display: flex;
     flex-direction: column;
@@ -216,8 +227,65 @@ footer p:hover {
 /* Responsive chỉnh kích thước chữ nhỏ lại trên màn hình nhỏ */
 @media (max-width: 768px) {
     footer {
-        font-size: 16px;
-        padding: 20px 0;
+          font-size: 13px;
+          padding: 20px 0;
+          padding-left: 10px;
+          padding-right: 10px;
+      }
+      .xanh{
+        color: #00A8FF;
+      }
+      img {
+        width: 80%; /* Ảnh luôn fit với khung */
+        height: auto; /* Giữ tỷ lệ gốc */
+        max-height: 400vh; /* Giới hạn chiều cao không vượt quá 90% màn hình */
+        object-fit: contain; /* Đảm bảo ảnh không bị méo */
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    header {
+        padding: 0.5rem 1rem;
+        align-items: center;
+    }
+
+    .logo1 {
+        height: 40px; /* Giảm kích thước logo */
+        margin-left: -70px; /* Đẩy logo cách lề trái 30px */
+    }
+    
+    nav {
+        margin-right: 10px; /* Đẩy menu cách lề phải 30px */
+    }
+
+    nav ul {
+        gap: 1rem; /* Giảm khoảng cách giữa các mục */
+        font-size: 0.9rem; /* Giảm kích thước chữ */
+        margin-right: 0px;
+    }
+
+    nav a {
+        font-size: 0.85rem; /* Thu nhỏ chữ trong menu */
+    }
+
+    .button1, 
+    .contact-button1 {
+        font-size: 0.8rem; /* Thu nhỏ chữ trong nút */
+        padding: 0.3rem 0.6rem; /* Giảm padding để nút không quá to */
+    }
+
+    .portfolio-menu {
+        min-width: 100px; /* Thu nhỏ menu con */
+        padding: 8px;
+    }
+
+    .portfolio-menu a {
+        font-size: 0.8rem; /* Thu nhỏ chữ trong menu dropdown */
+        padding: 4px 6px;
+    }
+
+    header.scrolled {
+        background-color: #000000de; /* Đổi màu nền khi cuộn */
+        padding: 0.4rem 1rem;
     }
 }
     </style>
@@ -238,7 +306,7 @@ footer p:hover {
           <ul>
               <li><a href="index.html">Home</a></li>
               <li>
-                  <a href="#" id="portfolioBtn">Portfolio ▾</a>
+                  <a href="#" id="portfolioBtn">Portfolio_▾</a>
                   <div class="portfolio-menu" id="portfolioMenu">
                       <a href="tonali.html">Branding</a>
                       <a href="ui.html">UI</a>
@@ -261,10 +329,18 @@ footer p:hover {
         <div class="anh">
             <img src="2d im.png" alt="">
         </div>
-        <footer>
-            <p>&copy; 2025 Khac Huy Designer | Designed by Figma and Visual Studio Code</p>
-        </footer>
+       
      
+
+
+
+
+        <footer>
+            <p class="footer-text">
+                &copy; 2025 Khac Huy Designer | Designed by 
+                <span class="xanh">Figma and Visual Studio Code</span>
+            </p>
+        </footer>     
 
 <script src="tonali.js"></script>
   

@@ -130,7 +130,7 @@ background: rgba(255, 255, 255, 0.2);
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s, transform 0.2s;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
   }
 
   .nav-links a:hover {
@@ -303,11 +303,11 @@ background: rgba(255, 255, 255, 0.2);
         color: #29ABE2;
     }
     .font-light{
-      font-size: 0.75cm;
+      font-size: 1cm;
       color: #ffffff;
     }
     .font-bold{
-      font-size: 0.75cm;
+      font-size: 2cm;
       color:#29ABE2;
     }
     .text-5x2{
@@ -343,15 +343,15 @@ background: rgba(255, 255, 255, 0.2);
           max-width: 300px;
       }
       .social-links img {
-          width: 40px;
-          height: 40px;
+          width: 60px;
+          height: 60px;
       }
       .anhdaidien{
         align-content: center;
         justify-content: center;
       }
      .font-bold{
-      font-size: 0.7cm;
+      font-size: 0.8cm;
      }
      .font-light{
       font-size: 0.4cm;
@@ -551,7 +551,7 @@ text-align: center;
 z-index: 1;
 }
 .banner1 .content2 h1{
-font-size: 6em;
+font-size: 4em;
 line-height: 1em;
 color: #00b3ff36;
 position: relative;
@@ -579,7 +579,7 @@ font-size: 2Rem;
 }
 @media screen and (max-width: 1023px) {
 .banner1 .slider{
-    width: 160px;
+    width: 200px;
     height: 200px;
     left: calc(50% - 80px);
     bottom: 50px;
@@ -590,8 +590,8 @@ font-size: 2Rem;
 }
 @media screen and (max-width: 767px) {
 .banner1 .slider{
-    width: 100px;
-    height: 150px;
+    width: 140px;
+    height: 160px;
     left: calc(50% - 50px);
 }
 .banner1 .content2 h1{
@@ -1032,4 +1032,33 @@ margin-bottom: 50px;
         font-size: 1cm; /* Giảm kích thước chữ trên điện thoại */
         padding: 10px;
     }
+}
+
+
+
+
+.container {
+  display: flex; /* Sử dụng Flexbox */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  min-height: calc(30vh - 10px); /* Đảm bảo container cao ít nhất bằng chiều cao viewport trừ 40px (20px trên + 20px dưới) */
+  padding: 40px 0; /* Cách trên và dưới 20px */
+}
+
+.line {
+  width: 1600px;
+  max-width: 100%;
+  position: relative;
+  display: flex; /* Sử dụng Flexbox */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  min-height: calc(30vh - 10px); /* Đảm bảo container cao ít nhất bằng chiều cao viewport trừ 40px (20px trên + 20px dưới) */
+  padding: 40px 0; /* Cách trên và dưới 20px */
+}
+
+.neon-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, rgb(0, 195, 255), #22c0ff, rgb(0, 204, 255));
+  box-shadow: 0 0 10px rgb(0, 195, 255);
 }
