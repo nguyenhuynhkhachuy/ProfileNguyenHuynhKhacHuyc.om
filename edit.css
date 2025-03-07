@@ -171,7 +171,7 @@ background: rgba(255, 255, 255, 0.2);
 
       .menu-close {
           display: block;
-          font-size: 2rem;
+          font-size: 1rem;
           color: white;
           cursor: pointer;
           position: absolute;
