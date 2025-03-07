@@ -234,12 +234,15 @@ footer p:hover {
         color: #00A8FF;
       }
       img {
-        width: 100%; /* Ảnh luôn fit với khung */
+        width: 120%; /* Ảnh luôn fit với khung */
         height: auto; /* Giữ tỷ lệ gốc */
-        max-height: 160vh; /* Giới hạn chiều cao không vượt quá 90% màn hình */
+        max-height: 400vh; /* Giới hạn chiều cao không vượt quá 90% màn hình */
         object-fit: contain; /* Đảm bảo ảnh không bị méo */
-        padding-top: 30;
+        padding-top: 0;
         padding-bottom: 0;
+    }
+    .anh img {
+        content: url('ps im 2.png'); /* Đổi thành ảnh mong muốn */
     }
     header {
         padding: 0.5rem 1rem; /* Giảm padding để tiết kiệm không gian */
@@ -247,10 +250,13 @@ footer p:hover {
 
     .logo1 {
         height: 40px; /* Giảm kích thước logo */
+        margin-left: 30px; /* Cách lề trái 30px */
     }
-
+    nav {
+        margin-right: 30px; /* Cách lề phải 30px */
+    }
     nav ul {
-        gap: 1rem; /* Giảm khoảng cách giữa các menu */
+        gap:1rem; /* Giảm khoảng cách giữa các menu */
         font-size: 1rem; /* Thu nhỏ chữ */
     }
 
@@ -266,13 +272,18 @@ footer p:hover {
 
     .portfolio-menu {
         min-width: 120px; /* Thu nhỏ menu con */
-        padding: 5px;
+        padding: 10px;
     }
 
     .portfolio-menu a {
         font-size: 0.9rem; /* Thu nhỏ chữ trong menu */
         padding: 5px 8px;
     }
+    header.scrolled {
+    background-color: #000000de; /* Đổi màu nền khi cuộn */
+    padding: 0.5rem 1rem;
+}
+
    
 }
 
