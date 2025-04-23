@@ -329,6 +329,20 @@ background: rgba(255, 255, 255, 0.2);
   }
   
     @media (max-width: 768px) {
+      .text-per {
+        font-size: 2rem;
+      }
+    
+      .text-info {
+        font-size: 1rem;
+      }
+    }
+    .leading-none {
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      font-size: 0;
+    }
+      
       .hero h1 {
           font-size: 2rem; /* Nhỏ hơn để phù hợp với mobile */
       }
@@ -358,18 +372,10 @@ background: rgba(255, 255, 255, 0.2);
         font-size: 0.8cm; /* Giảm kích thước cho các chữ nhỏ */
     }
 
-    .font-bold {
-        font-size: 1.5cm; /* Giảm kích thước cho các chữ đậm */
-    }
-
-    .text-5xl {
-        font-size: 5rem; /* Thêm cho trường hợp font-size của text-5xl */
-    }
-
   .social-links a:hover {
       transform: scale(1.6) rotate(30deg); /* Tăng kích thước khi hover */
   }
-}
+
      
   
   

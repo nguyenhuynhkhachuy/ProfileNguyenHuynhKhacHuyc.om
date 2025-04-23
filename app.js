@@ -118,4 +118,27 @@ export default function ContactMe() {
       </motion.div>
     </div>
   );
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+module.exports = {
+  content: ["./*.html"], // hoặc đường dẫn tương ứng với project của bạn
+  theme: {
+    extend: {},
+  },
+  plugins: [],
 }
