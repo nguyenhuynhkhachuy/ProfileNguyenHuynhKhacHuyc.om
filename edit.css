@@ -330,18 +330,26 @@ background: rgba(255, 255, 255, 0.2);
   
     @media (max-width: 768px) {
       .text-per {
-        font-size: 2rem;
+        font-size: 1.75rem;
       }
     
       .text-info {
-        font-size: 1rem;
+        font-size: 0.5rem;
       }
+      .leading-none {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        }
+        .anhdaidien {
+          width: 100%;
+          max-width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 0;
+        }
+        
     }
-    .leading-none {
-      justify-content: flex-start;
-      flex-wrap: nowrap;
-      font-size: 0;
-    }
+      
       
       .hero h1 {
           font-size: 2rem; /* Nhỏ hơn để phù hợp với mobile */
@@ -352,10 +360,7 @@ background: rgba(255, 255, 255, 0.2);
       .typing-effect {
           font-size: 1.2rem;
       }
-      .hero img {
-          width: 100%; /* Ảnh co giãn theo kích thước màn hình */
-          max-width: 300px;
-      }
+      
       .social-links img {
           width: 60px;
           height: 60px;
@@ -363,6 +368,10 @@ background: rgba(255, 255, 255, 0.2);
       .anhdaidien{
         align-content: center;
         justify-content: center;
+        margin-left: 4cm;
+        width: 90%;        /* Chiếm 90% chiều rộng container */
+        max-width: 700px;  /* Phóng to ảnh tối đa 700px */
+        border-radius: 10px;
       }
      
      .social-links a {
