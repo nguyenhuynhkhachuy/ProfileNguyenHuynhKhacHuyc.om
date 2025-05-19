@@ -34,17 +34,6 @@
 }
 
 
-/* Responsive chỉnh kích thước chữ nhỏ lại trên màn hình nhỏ */
-@media (max-width: 768px) {
-    footer {
-          font-size: 16px;
-          padding: 20px 0;
-      }
-      .xanh{
-        color: #00A8FF;
-      }
-}
-
 
 
 
@@ -226,18 +215,22 @@ footer p {
 footer p:hover {
         color: #00A8FF; /* Đổi sang màu xanh khi hover */
     }
+ 
+
 
 /* Responsive chỉnh kích thước chữ nhỏ lại trên màn hình nhỏ */
 @media (max-width: 768px) {
     footer {
-          font-size: 16px;
-          padding: 20px 0;
-          padding-left: 10px;
-          padding-right: 10px;
-      }
-      .xanh{
+        font-size: 16px;
+        padding: 20px 0;
+    }
+
+    .xanh {
         color: #00A8FF;
-      }
+        display: block;
+        margin-top: 5px;
+    }
+  
       img {
         width: 120%; /* Ảnh luôn fit với khung */
         height: auto; /* Giữ tỷ lệ gốc */
@@ -246,9 +239,7 @@ footer p:hover {
         padding-top: 0;
         padding-bottom: 0;
     }
-    .anh img {
-        content: url('ps im 2.png'); /* Đổi thành ảnh mong muốn */
-    }
+    
     header {
         padding: 0.5rem 1rem;
         align-items: center;
@@ -294,6 +285,10 @@ footer p:hover {
         padding: 0.4rem 1rem;
     }
 }
+ /* padding: 0.4rem 1rem;
+    .anh img {
+        content: url('ps im 2.png'); /* Đổi thành ảnh mong muốn */
+     
     </style>
     
     
@@ -346,7 +341,8 @@ footer p:hover {
                 &copy; 2025 Khac Huy Designer | Designed by 
                 <span class="xanh">Figma and Visual Studio Code</span>
             </p>
-        </footer>     
+        </footer>
+                 
 
 <script src="tonali.js"></script>
   
@@ -403,3 +399,6 @@ footer p:hover {
    </script>
 </body>
     </html>
+
+   
+    
