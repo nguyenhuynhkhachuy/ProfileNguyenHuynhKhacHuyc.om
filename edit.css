@@ -359,7 +359,7 @@ background: rgba(255, 255, 255, 0.2);
         justify-content: center;
         
         width: 90%;        /* Chiếm 90% chiều rộng container */
-        max-width: 350px;  /* Phóng to ảnh tối đa 700px */
+        max-width: 300px;  /* Phóng to ảnh tối đa 700px */
         border-radius: 10px;
         margin-left: -20px;
         
