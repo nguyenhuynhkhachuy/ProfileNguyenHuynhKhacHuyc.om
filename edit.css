@@ -340,18 +340,7 @@ background: rgba(255, 255, 255, 0.2);
         flex-wrap: nowrap;
         justify-content: flex-start;
         }
-        .anhdaidien {
-          width: 100%;
-          max-width: 100%;
-          margin-left: auto;
-          margin-right: auto;
-          padding: 0;
-        }
-        
-    }
-      
-      
-      .hero h1 {
+        .hero h1 {
           font-size: 2rem; /* Nhỏ hơn để phù hợp với mobile */
       }
       .hero p {
@@ -370,20 +359,29 @@ background: rgba(255, 255, 255, 0.2);
         justify-content: center;
         margin-left: 4cm;
         width: 90%;        /* Chiếm 90% chiều rộng container */
-        max-width: 700px;  /* Phóng to ảnh tối đa 700px */
+        max-width: 350px;  /* Phóng to ảnh tối đa 700px */
         border-radius: 10px;
+        margin-left: 35px;
       }
      
      .social-links a {
       transform: scale(1.2); /* Tăng kích thước mặc định */
   }
   .font-light {
-        font-size: 0.8cm; /* Giảm kích thước cho các chữ nhỏ */
+        font-size: 0.6cm; /* Giảm kích thước cho các chữ nhỏ */
     }
 
   .social-links a:hover {
       transform: scale(1.6) rotate(30deg); /* Tăng kích thước khi hover */
   }
+        
+        
+        
+        
+        
+    }
+      
+      
 
      
   
