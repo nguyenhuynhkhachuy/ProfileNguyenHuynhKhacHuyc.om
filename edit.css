@@ -357,11 +357,13 @@ background: rgba(255, 255, 255, 0.2);
       .anhdaidien{
         align-content: center;
         justify-content: center;
-        margin-left: 4cm;
+        
         width: 90%;        /* Chiếm 90% chiều rộng container */
         max-width: 350px;  /* Phóng to ảnh tối đa 700px */
         border-radius: 10px;
-        margin-left: 0px;
+        margin-left: -20px;
+        
+        
       }
      
      .social-links a {
