@@ -24,7 +24,14 @@
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<style>
+    img.white-icon {
+  filter: invert(0) !important;
+  -webkit-filter: invert(0) !important;
+  mix-blend-mode: normal !important;
+}
 
+  </style>
 
 
 
@@ -50,14 +57,31 @@
         </div>
         <img src="logo.png" class="logo1" alt="Logo">
         <nav class="nav-links">
-            <div class="menu-close" onclick="toggleMenu()">&times;</div>
-            <ul>
-                <li><a href="#hero" onclick="closeMenu()">Home</a></li>
-                <li><a href="#resume" onclick="closeMenu()">Resume</a></li>
-                <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
-                <li><button class="button1" onclick="location.href='#contact'; closeMenu();">Contact</button></li>
-            </ul>
-        </nav>
+    <div class="menu-close" onclick="toggleMenu()">&times;</div>
+    
+    <ul>
+        <li><a href="#hero" onclick="closeMenu()">Home</a></li>
+        <li><a href="#resume" onclick="closeMenu()">Resume</a></li>
+        <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
+        <li>
+            <button class="button1" onclick="location.href='#contact'; closeMenu();">Contact</button>
+        </li>
+    </ul>
+
+    <!-- Social Icons: only show in mobile menu -->
+    <div class="social-links white-icon">
+        <a href="https://www.facebook.com/profile.php?id=100045773663561" target="_blank" aria-label="Facebook">
+            <img src="fb.png" alt="Facebook">
+        </a>
+        <a href="https://www.behance.net/khchi" target="_blank" aria-label="Behance">
+            <img src="be.png" alt="Behance">
+        </a>
+        <a href="https://www.instagram.com/nguyenhuynhkhachuy193/" target="_blank" aria-label="Instagram">
+            <img src="ig.png" alt="Instagram">
+        </a>
+    </div>
+</nav>
+
     </header>
 <script>
     function toggleMenu() {
@@ -68,8 +92,9 @@
         document.querySelector('.nav-links').classList.remove('show');
     }
 </script>
+
 <script>
-    window.addEventListener("scroll", function () {
+    window.addEventListener("scroll", function () {    // dau 3 gach
         let header = document.querySelector("header");
         if (window.scrollY > 50) {
             header.classList.add("scrolled");
@@ -77,6 +102,17 @@
             header.classList.remove("scrolled");
         }
     });
+    </script>
+    <script>
+        function showModal(content) {
+            const modal = document.getElementById('modal');
+            document.getElementById('modal-content').innerText = content;
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
     </script>
 
 
@@ -317,14 +353,14 @@
         <h2 class="section-title">My Portfolio</h2>
         <div class="banner1">
             <div class="slider" style="--quantity: 8">
-                <div class="item" onclick="openPopup(1)" style="--position: 1"><img src="br.png" alt=""class="clickable-img" data-link="tonali.html"></div>
-                <div class="item" onclick="openPopup(2)" style="--position: 2"><img src="poster.png" alt=""class="clickable-img" data-link="poster.html"></div>
-                <div class="item" onclick="openPopup(3)" style="--position: 3"><img src="ui.png" alt=""class="clickable-img" data-link="ui.html"></div>
-                <div class="item" onclick="openPopup(4)" style="--position: 4"><img src="sc.png" alt=""class="clickable-img" data-link="social.html"></div>
-                <div class="item" onclick="openPopup(5)" style="--position: 5"><img src="bn.png" alt=""class="clickable-img" data-link="banner.html"></div>
-                <div class="item" onclick="openPopup(6)" style="--position: 6"><img src="st.png" alt=""class="clickable-img" data-link="standee.html"></div>
-                <div class="item" onclick="openPopup(7)" style="--position: 7"><img src="lg.png" alt=""class="clickable-img" data-link="logo.html"></div>
-                <div class="item" onclick="openPopup(8)" style="--position: 8"><img src="2d.png" alt=""class="clickable-img" data-link="2d.html"></div>
+                <div class="item" onclick="openPopup(1)" style="--position: 1"><img src="br.png" draggable="false" alt=""class="clickable-img" data-link="tonali.html"></div>
+                <div class="item" onclick="openPopup(2)" style="--position: 2"><img src="poster.png" draggable="false" alt=""class="clickable-img" data-link="poster.html"></div>
+                <div class="item" onclick="openPopup(3)" style="--position: 3"><img src="ui.png" draggable="false" alt=""class="clickable-img" data-link="ui.html"></div>
+                <div class="item" onclick="openPopup(4)" style="--position: 4"><img src="sc.png" draggable="false" alt=""class="clickable-img" data-link="social.html"></div>
+                <div class="item" onclick="openPopup(5)" style="--position: 5"><img src="bn.png" draggable="false" alt=""class="clickable-img" data-link="banner.html"></div>
+                <div class="item" onclick="openPopup(6)" style="--position: 6"><img src="st.png" draggable="false" alt=""class="clickable-img" data-link="standee.html"></div>
+                <div class="item" onclick="openPopup(7)" style="--position: 7"><img src="lg.png" draggable="false" alt=""class="clickable-img" data-link="logo.html"></div>
+                <div class="item" onclick="openPopup(8)" style="--position: 8"><img src="2d.png" draggable="false" alt=""class="clickable-img" data-link="2d.html"></div>
             </div>
             <div class="content2">
                 <h1 data-content="PORTFOLIO"><b>PORTFOLIO</b></h1> 
@@ -342,6 +378,34 @@
         <button class="button" onclick="location.href='2d.html'">Other,...</button>
     </div>
  </div>
+
+
+ <script>
+const banner = document.querySelector('.banner1');
+const slider = document.querySelector('.banner1 .slider');
+let isDragging = false;
+let startX = 0;
+let rotateY = 0;
+
+banner.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  startX = e.clientX;
+  banner.style.cursor = 'grabbing';
+});
+
+document.addEventListener('mouseup', () => {
+  isDragging = false;
+  banner.style.cursor = 'default';
+});
+
+document.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+  const deltaX = e.clientX - startX;
+  startX = e.clientX;
+  rotateY += deltaX * 0.3;
+  slider.style.transform = `perspective(1000px) rotateX(-16deg) rotateY(${rotateY}deg)`;
+});
+</script>
 
 
 
@@ -540,18 +604,8 @@
     });
     </script>
 
-
-    <script>
-        function showModal(content) {
-            const modal = document.getElementById('modal');
-            document.getElementById('modal-content').innerText = content;
-            modal.style.display = 'flex';
-        }
-
-        function closeModal() {
-            document.getElementById('modal').style.display = 'none';
-        }
-    </script>
+    
+    
       <script src="https://cdn.tailwindcss.com">
   </script>
 
@@ -577,6 +631,16 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+
+
+
+
+
+
+
+   
+
   </body>
  </html>
  
