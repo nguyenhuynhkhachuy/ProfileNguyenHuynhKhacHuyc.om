@@ -387,6 +387,7 @@ let isDragging = false;
 let startX = 0;
 let rotateY = 0;
 
+// PC (Mouse)
 banner.addEventListener('mousedown', (e) => {
   isDragging = true;
   startX = e.clientX;
@@ -405,7 +406,26 @@ document.addEventListener('mousemove', (e) => {
   rotateY += deltaX * 0.3;
   slider.style.transform = `perspective(1000px) rotateX(-16deg) rotateY(${rotateY}deg)`;
 });
+
+// Mobile (Touch)
+banner.addEventListener('touchstart', (e) => {
+  isDragging = true;
+  startX = e.touches[0].clientX;
+});
+
+banner.addEventListener('touchend', () => {
+  isDragging = false;
+});
+
+banner.addEventListener('touchmove', (e) => {
+  if (!isDragging) return;
+  const deltaX = e.touches[0].clientX - startX;
+  startX = e.touches[0].clientX;
+  rotateY += deltaX * 0.3;
+  slider.style.transform = `perspective(1000px) rotateX(-16deg) rotateY(${rotateY}deg)`;
+});
 </script>
+
 
 
 

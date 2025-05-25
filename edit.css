@@ -475,7 +475,7 @@ background: rgba(255, 255, 255, 0.2);
         width: 90%;        /* Chiếm 90% chiều rộng container */
         max-width: 300px;  /* Phóng to ảnh tối đa 700px */
         border-radius: 10px;
-        margin-left: 5px;
+        margin-left: 20px;
         
         
       }
@@ -641,6 +641,8 @@ background: rgba(255, 255, 255, 0.2);
       transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
       z-index: 2;
       cursor: grab;
+      transition: transform 0.2s ease-out;
+
     }
 
     .banner1 .slider .item {
