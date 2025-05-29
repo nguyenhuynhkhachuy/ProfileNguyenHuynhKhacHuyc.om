@@ -30,7 +30,60 @@
   -webkit-filter: invert(0) !important;
   mix-blend-mode: normal !important;
 }
+</style>
 
+
+<style>
+    /* Layout phủ toàn trang */
+    #device-warning {
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000b22; /* màu tối */
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 3rem;
+      font-family: Arial, sans-serif;
+      transition: opacity 0.5s ease;
+    }
+    #device-warning p:last-of-type {
+  font-style: italic;
+  font-size: 1rem;
+  color: #9c9c9c; /* màu xám nhạt */
+}
+
+    #device-warning h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #29ABE2; /* vàng nổi bật */
+    }
+
+    #device-warning p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    /* Ẩn layout khi tắt */
+    #device-warning.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Có thể thêm style cho web chính ở đây */
+    #main-content {
+      display: none;
+    }
+
+    #main-content.show {
+      display: block;
+    }
   </style>
 
 
@@ -38,7 +91,20 @@
 </head>
 <body>
 
+<!-- Layout cảnh báo -->
+  <div id="device-warning">
+    <h1>Trải nghiệm tốt nhất trên máy tính</h1>
+<p>Để có trải nghiệm tối ưu, vui lòng truy cập trang web này bằng máy tính. Cảm ơn bạn!</p>
+<p><em>For the best experience, please view this website on a desktop device. Thank you!</em></p>
 
+  </div>
+  <script>
+    // Sau 7 giây thì ẩn layout cảnh báo và hiển thị nội dung chính
+    setTimeout(() => {
+      document.getElementById("device-warning").classList.add("hidden");
+      document.getElementById("main-content").classList.add("show");
+    }, 7000); // bạn có thể chỉnh 5000 = 5s, 10000 = 10s tuỳ ý
+  </script>
 
 
 
@@ -73,12 +139,13 @@
         <a href="https://www.facebook.com/profile.php?id=100045773663561" target="_blank" aria-label="Facebook">
             <img src="fb.png" alt="Facebook">
         </a>
-        <a href="https://www.behance.net/khchi" target="_blank" aria-label="Behance">
-            <img src="be.png" alt="Behance">
-        </a>
         <a href="https://www.instagram.com/nguyenhuynhkhachuy193/" target="_blank" aria-label="Instagram">
             <img src="ig.png" alt="Instagram">
         </a>
+        <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank" aria-label="Behance">
+            <img src="be.png" alt="Behance">
+        </a>
+        
     </div>
 </nav>
 
@@ -218,12 +285,13 @@
                         <a href="https://www.facebook.com/profile.php?id=100045773663561" target="_blank" class="social-link">
                             <img src="fb.png" alt="Facebook" class="h-8 w-8">
                         </a>
-                        <a href="https://www.behance.net/khchi" target="_blank" class="social-link">
-                            <img src="be.png" alt="Behance" class="h-8 w-8">
-                        </a>
                         <a href="https://www.instagram.com/nguyenhuynhkhachuy193/" target="_blank" class="social-link">
                             <img src="ig.png" alt="Instagram" class="h-8 w-8">
                         </a>
+                        <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank" aria-label="Behance">
+                            <img src="be.png" alt="Behance">
+                        </a>
+                        
                     </div>
                 </div>
             </div>
@@ -367,16 +435,7 @@
             </div>
         </div>
     </section>
-    <div class="button-row">
-        <button class="button" onclick="location.href='tonali.html'">Branding</button>
-        <button class="button" onclick="location.href='poster.html'">Poster</button>
-        <button class="button" onclick="location.href='ui.html'">UI/UX</button>
-        <button class="button" onclick="location.href='banner.html'">Banner</button>
-        <button class="button" onclick="location.href='logo.html'">Logo</button>
-        <button class="button" onclick="location.href='standee.html'">Standee</button>
-        <button class="button" onclick="location.href='social.html'">Social </button>
-        <button class="button" onclick="location.href='2d.html'">Other,...</button>
-    </div>
+    
  </div>
 
 
